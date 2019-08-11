@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c51f600abd.js"></script>
+    <!-- <link href="css/booking.css" rel="stylesheet">
+    <link href="css/delivery.css" rel="stylesheet">
+    <link href="css/info.css" rel="stylesheet"> 
+    <link href="css/logged-in.css" rel="stylesheet"> 
+	<link href="css/main-page.css" rel="stylesheet">
+    <link href="css/result-page.css" rel="stylesheet"> 
+    <link href="css/summary.css" rel="stylesheet"> -->
+    <link href="css/sign-in.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Log In</title>
+</head>
+
+<body>
+
+        <div class="container">
+                <div class="navigation-bar" >
+                <div>
+                <p class='navigation-title'>Washly</p>
+                </div>
+                         <div class="navigation-content">
+                            <p> About</p>
+                            <p>FAQ</p>
+                           <a class="navigation-content-link " href="#" >
+                               <p class="navigation-content-text" id="modal-btn"> Login</p>
+                            </a>
+                           <div> 
+                               <a href="#">
+                                   <button class="navigation-content-button" id="modal-second-button">Sign Up</button>
+                                </a>
+                            </div>
+                           
+                            </div>
+                            </div>
+                
+                
+                <div class="search-container"> 
+                <p class="search-container-text">Find the Closest <span class="blue-text">Laundry Service</span> Around You</p>
+                     <input id="location" class="input-text" type="text" placeholder="Enter your location to see laundry outlets close to you"></input>
+                     <i class="fas fa-map-marker-alt" id="searchIcon"></i>
+                  <button class="search-container-button" >Search</button>
+                  
+                    <div class="pic">
+                <div ><img  class="picture1" src="img/667220191440.png"></div>
+                <div><img  class="picture2" src="img/Group.png"></div>
+                   
+                   
+            </div>
+                   
+                  <div class="terms">
+                         <ul>
+                             <a><li>Privacy</li></a>
+                             <li class="dot">.</li>
+                             <a><li>Terms</li></a>
+                             <li class="dot">.</li>
+                             <a><li>Feedback</li></a>
+                             <li class="dot">.</li>
+                             <a><li><span></span><span>Copyright 2019 Washly</span></li></a>
+                            </ul>
+                        </div>
+                     
+           </div>
+           </div>
+           <div class="modal-one">
+              <span class="close-btn">&times;</span>
+              
+                  <form class="loginform form">
+                  <div>
+                      <div>
+                  <p class="second-text">Welcome back, Login</p>
+                 </div>
+              </div>
+                  
+                  <label class="signInLabel">Email</label>
+                  <input id="loginemail" id="work" class="signInInput" type="text" placeholder="example@email.com"/>
+                  <label class="signInLabel">Password</label>
+                  <input id="loginpass" id="work" class="signInInput" type="password" placeholder="enter your password"/> 
+                  
+                  
+                  <button  type="submit" class="signInButton" >Login</button>
+                  <h6 id="state"></h6>
+                  <h6 id="text"></h6>
+                  <a  href="/" class="newUser">Forgot Password?</a>
+                  <button class="signIngoogle" onclick="signIn()"><span> <img class="sign-in-search-icon" src="./img/search.png"/></span>Login with Google</button>
+                  <div class="move"><p>Don't have an account? <span class="makemeblue"  onclick="toggleToSignin()"><a href="#">Sign up</a></span></p></div>
+                  </form>
+               </div>      
+           <div class="modal-two">
+              <span id="close-btn">&times;</span>
+              
+                  <form action="" class="signupform signUp-Form">
+                  <div>
+                    <div>
+                      <h3> Sign up to request a laundry service</h3>
+                    </div>
+                  </div>
+                  <label class="formLabel">What should we call you?</label>
+                  <input id="name" class="formInput" type="text" placeholder="firstname"/>
+                  <label class="formLabel">Email Address</label>
+                  <input id="email"  class="formInput" type="text" placeholder="example@email.com"/>
+                  <label class="formLabel">Password</label>
+                  <input id="pass" class="formInput" type="password" placeholder="choose a password"/>
+                  <button class="formButton" type="submit" onclick="toggleToSignup()">Sign Up</button>
+                  <h6 id="statement"></h6>
+                  <button class="google" onclick="googleSignin()"><span class="search-icon"><img src="./img/search.png"/></span>Sign up with Google</button>
+                  <p class="signIn-Form">Already have an account?  <a class="makemeblue" href="#"  onclick="toggleToSignup()"><span class="makemeblue" >Login</span></Sign></p>
+                  </form>
+            
+      
+          </div>
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+     <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+            <script src="js/auth.js"></script>
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Xh2zPVQMGJZM5o82au4yP5Qk0kA8nSA&libraries=places"></script>
+            <script src="./js/autocomplete.js"></script>
+            <script src="/js/geolocation.js"></script>
+            <script src="/js/modal.js"></script>
+            <script src="/js/search.js"></script>
+    </body>
+</html>

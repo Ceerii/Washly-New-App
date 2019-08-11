@@ -1,0 +1,206 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+
+}
+@font-face {
+    font-family: 'Product Sans Regular';
+    src: url("Product\ Sans\ Regular.ttf"); /* IE9 Compat Modes */
+  }
+body{
+   font-family: 'Product Sans Regular';
+}
+
+.container{
+  background:#fdfeff;
+  background-image: url(/img/Groups.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 60%;
+  width:100%;
+  height:667px;
+  max-height: 100%;
+}
+.navigation-bar{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+ box-shadow: 0 4px 2px -2px #B3B3B3;
+ margin: 0 70px;
+ padding-left:15px;
+ padding-right: 30px;
+ height:65px;
+}
+.navigation-title{
+    color: #5170FD;
+    font-size: 30px;
+    margin-top:16px;
+    margin-left: 16px;
+}
+.navigation-content{
+    display: flex;
+  justify-content: space-between;
+  width:420px;
+  font-size: 18px;
+padding-top: 35px;
+margin-top: -18px;
+margin-left: 10px;
+}
+.navigation-content>p{
+    font-size: 16px;
+    margin-top: 7px;
+}
+.navigation-content>p:hover{
+    margin-bottom: 15px;
+    border-bottom:3px solid #5170FD;
+}
+.navigation-content-text{
+    color:#5170FD;
+    font-size:18px;
+    text-decoration: none;
+    margin-top: 3px;
+    margin-bottom:15px;
+}
+.navigation-content-text:hover{
+    padding-bottom: 2px;
+    border-bottom: 3px solid #000000;
+}
+.navigation-content-link{
+    color:#5170FD;
+    font-size:18px;
+    text-decoration: none;
+    margin-top: 3px;
+    margin-bottom:15px;
+
+}
+.navigation-content-button{
+    background: #5170FD;
+border-radius: 4px;
+width:155px;
+height:40px;
+color:white;
+font-size: 16px;
+text-decoration: none;
+text-align: center;
+margin-left: -20px;
+margin-top:-5px;
+}
+.navigation-content-button:hover{
+    background:#5170FD;
+    color:white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+    cursor:pointer;
+}
+.search-container-text{
+  font-size: 34px;
+  text-align: center;
+  width:505px;
+  margin:170px auto 0 auto;
+  line-height: 1.4;
+}
+.blue-text{
+ letter-spacing: 100;
+    color:#5170FD;
+}
+.input-text{
+    margin:30px 340px 0 320px;
+   width:700px;
+   height:40px;
+   border-radius: 10px;
+   color:black;
+   font-size: 16px;
+   position: relative;
+   z-index:3;
+   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+    text-indent: 20px;
+}
+.search-container-button{
+    background: #5170FD;
+    border-radius: 4px;
+    width:155px;
+    height:40px;
+    color:white;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    margin-top:30px;
+    margin-left:600px;
+}
+.search-container-button:hover{
+    background:#5170FD;
+    color:white;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+    cursor:pointer;
+}
+.terms>ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width:400px;
+    margin-left:480px;
+    margin-top:150px;
+    text-decoration: none;
+    color:black;
+}
+.terms>ul>a>li:hover{
+  color:#5170FD;
+}
+.copyright-logo{
+    padding-right: 5px;
+    font-size: 26px;
+    
+}
+.copyright-text{
+    padding-top: -25px;
+}
+.pic{
+    display: flex;
+    justify-content: space-between
+}
+.picture1{
+    width:250px;
+    height:250px;
+    position: absolute;
+    top:417px;
+    left:10px;
+    padding:0;
+    z-index: 1;
+}
+.picture2{
+    top:467px;
+    left:1065px;
+    position:absolute;
+    z-index: 1;
+    width:300px;
+    height:200px;
+}
+
+.dot{
+    font-weight: bolder;
+}
+
+.second-navigation-content{
+    display: flex;
+  justify-content: space-between;
+  width:220px;
+  font-size: 18px;
+padding-top: 35px;
+margin-top: -18px;
+margin-left: 10px;
+}
+.second-navigation-content>p{
+    font-size: 16px;
+    margin-top: 7px;
+}
+.second-navigation-content>p:hover{
+    margin-bottom: 15px;
+    border-bottom:3px solid #5170FD;
+}
+.navigation-user-name{
+    margin-left:120px;
+    margin-top: 23px;
+}
+

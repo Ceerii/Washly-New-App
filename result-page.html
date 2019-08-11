@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Washly</title>
+    <link href="css/booking.css" rel="stylesheet">
+    <link href="css/delivery.css" rel="stylesheet">
+    <link href="css/info.css" rel="stylesheet"> 
+    <link href="css/logged-in.css" rel="stylesheet"> 
+	<link href="css/main-page.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/result-page.css" rel="stylesheet"> 
+	<link href="css/sign-in.css" rel="stylesheet">
+    <link href="css/summary.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="resultContainer">
+            <div class="main-container">
+                <div class="navBar" >
+                <div class="navTitle">
+                <p>Washly</p>
+                </div>
+                <div class="resultmainSearchContainer"> 
+                        <select default="Filter">
+                                <option >Filter</option>
+                                <option >100m</option>
+                                <option >200m</option>
+                                <option >400m</option>
+                            </select>
+                         <input class="resultInputText" type="text" placeholder="Your Location..."></input>
+                         </div>
+                         <div class="resultnavContent">
+                             <p>Home</p>
+                            <p> About</p>
+                            <p>FAQ</p>
+                           <a  href="#" class="resultlogIn"><p  id="modal-btn"class="resultlogIn logIn">Login</p></a>
+                           <a  class="signuplink" href="#"><button  id="modal-second-button"class="resultsignUp signUp">Sign Up</button></a>
+                           
+                            </div>
+                            </div>
+                            <p class="resultmainSearchContainertext">There are 8 results based on your search</p>
+                    </div>
+           
+           
+           <div class="Cards">
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            
+            </div>
+            <a href="#" ><button class="result-booknow" onclick="showInfoModal()">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#"onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#" onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#" onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#" onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#" onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#" onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            <div class="resultCards">
+            <div class="result-container-image"></div>
+            <div class="result-middle">
+            </div>
+            <a href="#" onclick="showInfoModal()"><button class="result-booknow">View</button></a>
+            </div>
+            </div>
+            </div>
+            <div class="modal-one">
+                <span class="close-btn">&times;</span>
+                
+                    <form class="loginform form">
+                    <div>
+                        <div>
+                    <p class="second-text">Welcome back, Login</p>
+                   </div>
+                </div>
+                    
+                    <label class="signInLabel">Email</label>
+                    <input id="loginemail" id="work" class="signInInput" type="text" placeholder="example@email.com"/>
+                    <label class="signInLabel">Password</label>
+                    <input id="loginpass" id="work" class="signInInput" type="password" placeholder="enter your password"/> 
+                    
+                    
+                    <button  type="submit" class="signInButton">Login</button>
+                    <h6 id="state"></h6>
+                    <h6 id="text"></h6>
+                    <a  href="/" class="newUser">Forgot Password?</a>
+                    <button class="signIngoogle"><span> <img class="sign-in-search-icon" src="./img/search.png"/></span>Login with Google</button>
+                    <div class="move"><p>Don't have an account? <span class="makemeblue"  onclick="toggleToSignin()"><a href="#">Sign up</a></span></p></div>
+                    </form>
+                 </div>      
+             <div class="modal-two">
+                <span id="close-btn">&times;</span>
+                
+                    <form action="" class="signupform signUp-Form">
+                    <div>
+                      <div>
+                        <h3> Sign up to request a laundry service</h3>
+                      </div>
+                    </div>
+                    <label class="formLabel">What should we call you?</label>
+                    <input id="name" class="formInput" type="text" placeholder="firstname"/>
+                    <label class="formLabel">Email Address</label>
+                    <input id="email"  class="formInput" type="text" placeholder="example@email.com"/>
+                    <label class="formLabel">Password</label>
+                    <input id="pass" class="formInput" type="password" placeholder="choose a password"/>
+                    <button class="formButton" type="submit" onclick="toggleToSignup()">Sign Up</button>
+                    <h6 id="statement"></h6>
+                    <button class="google"><span class="search-icon"><img src="./img/search.png"/></span>Sign up with Google</button>
+                    <p class="signIn-Form">Already have an account?  <a class="makemeblue" href="#"  onclick="toggleToSignup()"><span class="makemeblue" >Login</span></a></p>
+                    </form>
+              
+        
+            </div> 
+            <div class="infoModal">
+                <div class="Infocontainer">
+                    <div class="container-image">
+                    <div>Company Name</div>
+                    </div>
+        
+                    <div class="middle-container">
+                    <div class="Middle"><div className="reviewNumber">(30)</div></div>
+                    <div class="h4"><span>Address:</span> 20, Montgomery Road,Yaba,Lagos</div>
+                    <div class="h5"><span>Contact:</span> 0202554202</div>
+                    <div class="h6"></div>
+                    </div>
+        
+                    <div class="bottom-container">
+                    <div class="bottom-container-title">
+                    <div></div>
+                    </div>
+                   <div class="reviews">
+                   <div class="reviewName">
+                        <div class="reviewPerson">John Doe</div>
+                        <div class="reviewDate">05/Jul/2019</div>
+                    </div>
+                    <div class="reviewStars">
+                    <div>
+                    </div>
+                    <div class="excellent">Excellent Packaging</div>
+                    </div>
+        
+                    <div class="reviewInfo">
+                    <div>I loved the way they packed my shirt, I only disliked the slow feedback from customer care.</div>
+                    </div>
+                    </div>
+        
+                   </div>
+                  
+                    <div class="last-container">
+                    <div class="last-container-item">
+                    <button class="addreview">Back</button>
+                        <a><button  onclick="loadBookingModal()" class="booknow">Book Now</button></a>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="bookingContainer">
+                        <div>
+                            <div class="booking-container-title">
+                                <p>Book a laundry service</p>
+                            </div>
+                        </div>
+              
+                        <div class="first-booking-container">
+                            <p>What would you like to do ?</p>
+                            <select>
+                                <option class="middle">Dry Clean</option>
+                                <option class="middle">Wash</option>
+                                <option class="middle">Iron</option>
+                                <option>Custom Order</option>
+                            </select>
+                        </div>
+              
+              
+              
+                        <!-- First Value -->
+                        <div class="second-booking-container">
+                            <div>
+                                <div class="second-booking-container-image"><img src="./img/shirt.png" /></div>
+                                <p class="second-booking-container-icon" name="product" value="100" id="qnty_1">
+                                    Shirt(s)</p>
+                                <select onchange='totalItem()' class="center" id="first">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <FontAwesomeIcon class="select-long-icon" icon="chevron-down" />
+                                <p class="second-booking-container-text" id='firstVal' name="price" max="3" min="1">&#8358;100</p>
+                            </div>
+              
+                            <div>
+                                <div class="second-booking-container-image"><img src="./img/Vector (10).png" /></div>
+                                <p class="second-booking-container-icon" name="product" value="100" id="qnty_2">
+                                    Trouser(s)</p>
+                                <select onchange='totalItem()' class="center" id="second">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <FontAwesomeIcon class="select-long-icon" icon="chevron-down" />
+                                <p class="second-booking-container-text" id="secondVal" name="price" max="3" min="1">&#8358;100</p>
+                            </div>
+              
+                            <div>
+                                <div class="second-booking-container-image"><img src="./img/Vector (9).png" /></div>
+                                <p class="second-booking-container-icon" name="product" value="100" id="qnty_3">
+                                    Skirt(s)</p>
+                                <select onchange='totalItem()' class="center" id="third">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <FontAwesomeIcon class="select-long-icon" icon="chevron-down" />
+                                <p class="second-booking-container-text" id="thirdVal" name="price" max="3" min="1">&#8358;100</p>
+                            </div>
+              
+                            <div>
+                                <div class="second-booking-container-image"><img src="./img/Vector (8).png" /></div>
+                                <p class="second-booking-container-icon" name="product" value="100" id="qnty_4">
+                                    Blouse(s)</p>
+                                <select onchange='totalItem()' class="center" id="fourth">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <FontAwesomeIcon class="select-long-icon" icon="chevron-down" />
+                                <p class="second-booking-container-text" id="fourthVal" name="price" max="3" min="1">&#8358;100</p>
+                            </div>
+              
+                            <div>
+                                <div class="second-booking-container-image"><img src="./img/Clothes.png" /></div>
+                                <p class="second-booking-container-icon-long" name="product" value="100" id="qnty_5">Suit/Jacket(s)
+                                </p>
+                                <select onchange='totalItem()' class="center" id="fifth">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <FontAwesomeIcon class="select-long-icon" icon="chevron-down" />
+                                <p class="second-booking-container-text" id="fifthVal" name="price" max="3" min="1">&#8358;100</p>
+                            </div>
+                        </div>
+              
+                        <div class="third-booking-container">
+                            <p>Total:   <span>&#8358;0.00</span></p>
+                            
+                            
+                            </div>
+                            <div class="third-booking">
+                                    <a href="#"><button class="goback">Back</button></a>
+                                    <a href="#"><button class="goforward">Set pick up date</button></a>
+                            </div>
+                    </div>
+                   </div> 
+            <div class="picture">
+                <div ><img class="picture3" src="img/667220191440.png"></div>
+                <div ><img class="picture4" src="img/Group.png"></div>
+                   
+                   
+              </div>
+              <script src="js/modal.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+     <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+            <script src="js/auth.js"></script>
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Xh2zPVQMGJZM5o82au4yP5Qk0kA8nSA&libraries=places"></script>
+            <script src="./js/autocomplete.js"></script>
+            <script src="/js/geolocation.js"></script>
+            <script src="/js/search.js"></script>
+        </body>
+        </html>
