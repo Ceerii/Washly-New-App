@@ -15,8 +15,7 @@
     font-family: 'Product Sans Regular';
     box-shadow:  4px 7px 8px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0,0,0,0.23);
     background-color: #fdfeff;
-    perspective:800;
-    transform-style: preserve-3d;
+    z-index: 10;
    }
    .booking-container-title{
     width:200px;

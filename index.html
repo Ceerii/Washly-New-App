@@ -45,11 +45,12 @@
                 
                 
                 <div class="search-container"> 
+                    <div class="search-second-container">
                 <p class="search-container-text">Find the Closest <span class="blue-text">Laundry Service</span> Around You</p>
                      <input id="location" class="input-text" type="text" placeholder="Enter your location to see laundry outlets close to you"></input>
                      <i class="fas fa-map-marker-alt" id="searchIcon"></i>
                   <button class="search-container-button" >Search</button>
-                  
+                </div>
                     <div class="pic">
                 <div ><img  class="picture1" src="img/667220191440.png"></div>
                 <div><img  class="picture2" src="img/Group.png"></div>
@@ -87,7 +88,7 @@
                   <input id="loginpass" id="work" class="signInInput" type="password" placeholder="enter your password"/> 
                   
                   
-                  <button  type="submit" class="signInButton" >Login</button>
+                  <button  type="submit" class="signInButton"onclick="toggleSignIn()" >Login</button>
                   <h6 id="state"></h6>
                   <h6 id="text"></h6>
                   <a  href="/" class="newUser">Forgot Password?</a>
@@ -110,7 +111,7 @@
                   <input id="email"  class="formInput" type="text" placeholder="example@email.com"/>
                   <label class="formLabel">Password</label>
                   <input id="pass" class="formInput" type="password" placeholder="choose a password"/>
-                  <button class="formButton" type="submit" onclick="toggleToSignup()">Sign Up</button>
+                  <button class="formButton" onclick="register()">Sign Up</button>
                   <h6 id="statement"></h6>
                   <button class="google" onclick="googleSignin()"><span class="search-icon"><img src="./img/search.png"/></span>Sign up with Google</button>
                   <p class="signIn-Form">Already have an account?  <a class="makemeblue" href="#"  onclick="toggleToSignup()"><span class="makemeblue" >Login</span></Sign></p>

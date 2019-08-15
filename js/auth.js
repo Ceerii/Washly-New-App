@@ -26,9 +26,41 @@ var firebaseConfig = {
         var errorCode = error.code;
         var errorMessage = error.message;
           
-        console.log(error.code)
-        console.log(error.message)
+        console.log(errorCode)
+        console.log(errorMessage)
      });
   }
   
+  
+
+  function register(e){
+     e.preventDefault();
+   var email=document.getElementById("email").value;
+   var password=document.getAnimations("pass").value;
+   if (email.length < 4) {
+      alert('Please enter an email address.');
+      return;
+    }
+    if (password.length < 4) {
+      alert('Please enter a password.');
+      return;
+    }
+
+   firebase.auth().createUserWithEmailAndPassword(email, password).then(function(data){
+      var token = data.credential.accessToken;
+        var user = data.user;
+        console.log(user);
+        console.log(token);
+
+        toggleToSignup();
+
+   }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      console.log(errorCode);
+      // ...
+    });
+  }
  

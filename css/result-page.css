@@ -64,6 +64,7 @@ body{
   }
   .resultSearchContainer{
     display: flex;
+    flex-direction:row;
     justify-content: space-between;
     margin: auto;
     margin-top: 15px;
