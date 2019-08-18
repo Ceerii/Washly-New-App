@@ -108,6 +108,13 @@ margin-top:-5px;
     text-align:center;
     width:700px;
 }
+.search-container{
+    display:flex;
+    flex-direction:column;
+    margin:-25px auto;
+    text-align:center;
+    width:700px;
+}
 .blue-text{
  letter-spacing: 100;
     color:#5170FD;
@@ -170,7 +177,7 @@ margin-top:-5px;
     width:250px;
     height:250px;
     position: absolute;
-    top:413px;
+    top:417px;
     left:10px;
     padding:0;
     z-index: 1;

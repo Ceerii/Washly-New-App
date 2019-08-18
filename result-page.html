@@ -7,10 +7,8 @@
     <meta name="author" content="">
     <script src="https://kit.fontawesome.com/c51f600abd.js"></script>
     <title>Washly</title>
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/djibe/clockpicker@1d03466e3b5eebc9e7e1dc4afa47ff0d265e2f16/dist/bootstrap4-clockpicker.min.css">
     <link href="css/booking.css" rel="stylesheet">
      <link href="css/delivery.css" rel="stylesheet">
     <link href="css/info.css" rel="stylesheet"> 
@@ -21,7 +19,8 @@
 	<link href="css/sign-in.css" rel="stylesheet">
     <link href="css/summary.css" rel="stylesheet">
     <link href="css/modal.css" rel="stylesheet">
-    <link href="css/clock.css" rel="stylesheet">
+    <!-- <link href="css/clock.css" rel="stylesheet"> -->
+    <link href="css/custom.css" rel="stylesheet">
     <link href="css/dropdown.css" rel="stylesheet">
     </head>
     <body>
@@ -50,64 +49,65 @@
                              <p>Home</p>
                             <p> About</p>
                             <p>FAQ</p>
-                           <a  href="#" class="resultlogIn"><p  id="modal-btn"class="resultlogIn logIn">Login</p></a>
-                           <a  class="signuplink" href="#"><button  id="modal-second-button"class="resultsignUp signUp">Sign Up</button></a>
+                           <a  href="#" class="resultlogIn"><p  id="modal-btn"class="start resultlogIn logIn">Login</p></a>
+                           <a  class="open signuplink" href="#"><button class="open resultsignUp signUp">Sign Up</button></a>
                            
                             </div>
                             </div>
-                            <p class="resultmainSearchContainertext">There are 8 results based on your search</p>
+                            <p class="resultmainSearchContainertext">There are <span class="totalno"></span> results based on your search</p>
                     </div>
            
            
            <div class="Cards">
+               <div class="texts"></div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             
             </div>
-            <a href="#" class="trigger"><button class="result-booknow" onclick="showInfoModal()">View</button></a>
+            <a href="#" class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#"onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#" class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#" onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#"  class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#" onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#" class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#" onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#"  class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#" onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#"  class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#" onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#" class="trigger"><button class="result-booknow">View</button></a>
             </div>
             <div class="resultCards">
             <div class="result-container-image"></div>
             <div class="result-middle">
             </div>
-            <a href="#" onclick="showInfoModal()" class="trigger"><button class="result-booknow">View</button></a>
+            <a href="#" class="trigger"><button class="result-booknow">View</button></a>
             </div>
             </div>
             </div>
@@ -130,9 +130,7 @@
                         
                                     <div class="middle-container">
                                     <div class="Middle"><FontAwesomeIcon className="star" icon="star" /><FontAwesomeIcon className="star" icon="star" /><FontAwesomeIcon className="star" icon="star" /><FontAwesomeIcon className="star" icon="star" /><FontAwesomeIcon className="star half-star" icon="star-half-alt" /><div className="reviewNumber">(30)</div></div>
-                                    <div class="h4"><span>Address:</span> 20, Montgomery Road,Yaba,Lagos</div>
-                                    <div class="h5"><span>Contact:</span> 0202554202</div>
-                                    <div class="h6"></div>
+                                   <div class="linked"> <p class="notsignin"><span href="#" class="notsigninlink">Sign Up</span> to see contact details</p></div> 
                                     </div>
                         
                                     <div class="bottom-container">
@@ -186,7 +184,7 @@
                                                       <li id="male">Laundry only</li>
                                                       <li id="female">Wash and Dry</li>
                                                       <li id="mafe">Ironing only</li>
-                                                      <li id="fema">Custom Order</li>
+                                                      <li id="fema" class="custom-order">Custom Order</li>
                                                     </ul>
                                                   </div>
                                                 <FontAwesomeIcon class="select-icon" icon="chevron-down" />
@@ -287,11 +285,7 @@
                                                              <p class="delivery-header">Pick Up</p>
                                                              <div class="delivery-label-select">
                                                              <label class="delivery-header"><img class="smaller" src="./img/Calender.png"/></label>
-                                                             <select>
-                                                                 <options> 
-                                                                     15-June
-                                                                 </options>
-                                                             </select>
+                                                             <input class="flatpickr flatpickr-input" type="text"  readonly="readonly">
                                                              </div>
                                                              <div class="delivery-label-select">
                                                              <label class="delivery-header"><img class="smaller" src="./img/alarmclock.png"/></label>
@@ -362,7 +356,8 @@
                             </div>
                 
             </div>
-            <!-- <div class="modal-one">
+
+             <div class="modal-one">
                 <span class="close-btn">&times;</span>
                 
                     <form class="loginform form">
@@ -387,7 +382,7 @@
                     </form>
                  </div>      
              <div class="modal-two">
-                <span id="close-btn">&times;</span>
+                <span class="closebtn">&times;</span>
                 
                     <form action="" class="signupform signUp-Form">
                     <div>
@@ -408,27 +403,56 @@
                     </form>
               
         
-            </div>  -->
-           
+            </div>  
+            <div class="modal-three">
+                <span class="custombutton">X</span>
+            <div class="customContainer">
+                <div class="customNavBar"><p className="customTitle">Custom Order</p></div>
+              <div class="pickcustomwear">
+                  <div>
+                     <p>Item</p>
+                     <div class="dropdowns1">
+                        <div class="selects1">
+                          <span>Add Item</span>
+                          <i class="fa fa-chevron-right"></i>
+                        </div>
+                        <input type="hidden" name="gender">
+                        <ul class="dropdown-menus1">
+                          <li id="male">Laundry only</li>
+                          <li id="female">Wash and Dry</li>
+                          <li id="mafe">Ironing only</li>
+                          <li id="fema">Custom Order</li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div>
+                      <p>Quantity</p>
+
+                  </div>
+              </div>
+              <div class="firstcustombutton"><button>Add More</button></div>
+              <div><button class="secondcustombutton">Back</button></div>
+                </div>
+</div>
+
                
                 
            
             <script src="js/modal.js"></script> 
             <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/gh/djibe/clockpicker@6d385d49ed6cc7f58a0b23db3477f236e4c1cd3e/dist/bootstrap4-clockpicker.min.js"></script>
-            <!-- <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-            <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="dist/bootstrap-clockpicker.min.js"></script> -->
-            <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+            <!-- <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script> -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
             <script src="js/carousel.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+            <!-- <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script> -->
             <script src="js/auth.js"></script>
+            <script src="js/signin.js"></script>
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5Xh2zPVQMGJZM5o82au4yP5Qk0kA8nSA&libraries=places"></script>
             <script src="./js/autocomplete.js"></script>
             <script src="/js/geolocation.js"></script>
             <script src="/js/search.js"></script>
             <script src="/js/time.js"></script>
+            <script src="/js/details.js"></script>
             <script src="/js/dropdown.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.js"></script>
         </body>
         </html>

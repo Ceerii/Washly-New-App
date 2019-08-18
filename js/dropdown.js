@@ -25,3 +25,17 @@ $('.dropdowns .dropdown-menus li').click(function () {
     $(this).parents('.dropdowns').find('span').text($(this).text());
     $(this).parents('.dropdowns').find('input').attr('value', $(this).attr('id'));
 });
+// Custom
+$('.dropdowns1').click(function () {
+    $(this).attr('tabindex', 1).focus();
+    $(this).toggleClass('active');
+    $(this).find('.dropdown-menus1').slideToggle(300);
+});
+$('.dropdowns1').focusout(function () {
+    $(this).removeClass('active');
+    $(this).find('.dropdown-menus1').slideUp(300);
+});
+$('.dropdowns1 .dropdown-menus1 li').click(function () {
+    $(this).parents('.dropdowns1').find('span').text($(this).text());
+    $(this).parents('.dropdowns1').find('input').attr('value', $(this).attr('id'));
+});

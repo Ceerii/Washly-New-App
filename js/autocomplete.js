@@ -43,34 +43,23 @@ function search(){
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             for (var i = 0; i < results.length; i++) {
               getResults = results[i];
-              getPlaceDetails();
+              console.log(results.length);
+              // console.log(results.name)
+
             //   console.log(getResults.place_id );
             }
-
+            localStorage.setItem("full-result", JSON.stringify(results))
+            localStorage.setItem("total-number", results.length);
+            console.log(localStorage.getItem("total-number"));
             console.log(getResults.place_id );
+            
+            window.location.assign("/result-page.html"); 
+           
           }else{
-              console.log("no")
+           console.log("no");
           }
     }
 }
 
-function  getPlaceDetails(){
-      var requestplace={
-        placeId: getResults.place_id,
-      };
-    //   console.log(requestplace.placeId);
 
-      service = new google.maps.places.PlacesService(document.createElement('div'));
-      service.getDetails(requestplace, callbackresult);
 
-      function callbackresult(details, status){
-          
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-            //  const check = [];
-            console.log(details.name);
-
-            
-        }
-
-      }
-}
